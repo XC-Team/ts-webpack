@@ -1,21 +1,9 @@
-// alert('hello, webpack!');
-// import {cube} from './math';
+import {cube} from './math';
 
-// function test() {
-//   cube(2);
-//   console.log('test alias');
-// }
-// test();
-// export default test;
+function cubeTest() {
+  document.body.innerHTML = '<h1>Hello, ts-webpack-template!</h1>';
+  console.log('cube>>>', cube(2))
+  console.log('>>>', 'Hello, ts-webpack-template!');
+}
 
-class Foo {}
-interface Bar {}
-type Bas = {}
-
-let foo: Foo;
-let bar: Bar;
-let bas: Bas;
-
-// const bar2 = Bar;
-const somevar = Foo;
-const someOtherVar = 123; 
+cubeTest();
