@@ -1,11 +1,13 @@
 {
-  "name": "ts-webpack-template",
+  "name": "@zenquan/ts-webpack-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "A webpack configuration environment for typescript",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config build/build.js",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config build/start.js"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config build/start.js",
+    "test": "tsc --outDir lib && mocha",
+    "coverage": "jest --coverage"
   },
   "sideEffects": false,
   "keywords": [],
