@@ -1,8 +1,18 @@
 {
   "name": "@zenquan/ts-webpack-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A webpack configuration environment for typescript",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/Zenquan/ts-webpack-template"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "keywords": [
+    "typescript",
+    "webpack",
+    "loader",
+    "template"
+  ],
   "scripts": {
     "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config build/build.js",
     "start": "cross-env NODE_ENV=development webpack-dev-server --config build/start.js",
@@ -10,9 +20,8 @@
     "coverage": "jest --coverage"
   },
   "sideEffects": false,
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "zenquan",
+  "license": "MIT",
   "devDependencies": {
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
