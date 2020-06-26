@@ -1,12 +1,14 @@
 {
   "name": "@zenquan/ts-webpack-template",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "A webpack configuration environment for typescript",
   "main": "index.js",
   "repository": {
     "url": "https://github.com/Zenquan/ts-webpack-template"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "typescript",
     "webpack",

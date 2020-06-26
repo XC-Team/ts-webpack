@@ -1,13 +1,15 @@
 const 
+  env = process.env.NODE_ENV,
   loaders = require('./loaders'),
   plugins = require('./plugins'),
   {resolve} = require('./utils'),
-  optimization = require('./optimization');
+  optimization = require('./optimization'),
+  zenconfig = require('./config');
 
 const generateConfig = (config, name) => {
   let uglify = name.indexOf('min') > -1;
   config = {
-    mode: process.env.node_env,
+    mode: env,
     entry: {
       // 'babel-polyfill', 
       main: [resolve('src/lib/index.ts')]
@@ -47,7 +49,10 @@ const generateConfig = (config, name) => {
     maxAssetSize: 3000000
   };
 
-  return config;
+  return {
+    ...config,
+    ...zenconfig
+  };
 }
 
 module.exports = generateConfig;
