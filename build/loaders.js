@@ -1,3 +1,5 @@
+const {loaders} = require('./config');
+
 const assetsLoaders = [
   {
     test: /.txt/,
@@ -13,4 +15,6 @@ const scriptLoaders = [
   },
 ]
 
-module.exports = assetsLoaders.concat(scriptLoaders);
+module.exports = {
+  rules: assetsLoaders.concat(scriptLoaders, loaders ? loaders : [])
+}; 

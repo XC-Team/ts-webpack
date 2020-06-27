@@ -1,10 +1,11 @@
 const 
+  UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
   env = process.env.NODE_ENV,
   loaders = require('./loaders'),
   plugins = require('./plugins'),
   {resolve} = require('./utils'),
   optimization = require('./optimization'),
-  zenconfig = require('./config');
+  {zenconfig} = require('./config');
 
 const generateConfig = (config, name) => {
   let uglify = name.indexOf('min') > -1;
@@ -32,12 +33,17 @@ const generateConfig = (config, name) => {
     port: 5000,
     contentBase: resolve('.')
   };
-  config.module = {
-    rules: loaders
-  };
+  config.module = loaders;
   config.plugins = plugins;
   if (uglify) {
-    config.optimization = optimization;
+    // optimization
+    config.optimization = {
+      minimizer: [
+        new UglifyJsPlugin({
+          include: resolve('dist'),
+        }),
+      ]
+    };
   }
   config.performance = {
     // false | "error" | "warning" // 不显示性能提示 | 以错误形式提示 | 以警告...

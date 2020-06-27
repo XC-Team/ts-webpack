@@ -16,4 +16,10 @@ git commit -m $1
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:zenquan/ts-webpack-template.git master:gh-pages
 
+cd ../../../
+git init
+git add -A
+git commit -m $2
+git push origin master
+
 cd -

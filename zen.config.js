@@ -1,20 +1,25 @@
-const 
-  {resolve} = require('./build/utils'),
+const
   isProd = process.env.NODE_ENV === 'production';
 
 const baseConfig = {
-  entry: {
-    // 'babel-polyfill', 
-    main: [resolve('src/lib/math.ts')]
-  },
+  entry: {},
 }
 
 const devConfig = {
   ...baseConfig,
+  loaders: [],
+  plugins: [],
+  optimization: {}
 }
 
 const prodConfig = {
-  ...baseConfig
+  ...baseConfig,
+  optimization: {
+    // splitChunks: {
+    //   // include all types of chunks
+    //   chunks: 'all'
+    // }
+  }
 }
 
-module.exports = isProd ? prodConfig : devConfig
+module.exports = isProd ? prodConfig : devConfig;

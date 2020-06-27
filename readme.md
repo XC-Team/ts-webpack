@@ -70,6 +70,7 @@ xxx.ts // 其他
 - 2020.06.21 webpack配置分层，做到更好的扩展
 - 2020.06.22 加入mocha+chai TDD测试驱动开发方式、jest测试覆盖率
 - 2020.06.26 提供zen.config.js覆盖build中的配置
-- [ ] 把zen.config.js的loader提取后放入build/loaders.js中
-- [ ] 把zen.config.js的plugin提取后放入build/plugins.js中
-- [ ] 把zen.config.js的optimization提取后放入build/optimization.js中
+- 2020.06.27 把zen.config.js的loader提取后放入build/loaders.js中
+- 2020.06.27 把zen.config.js的plugin提取后放入build/plugins.js中
+- 2020.06.27 把zen.config.js的optimization提取后放入build/optimization.js中
+- [ ] 加入eslint

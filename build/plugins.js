@@ -1,6 +1,7 @@
 const webpack = require('webpack'),
+  HtmlWebpackPlugin = require('html-webpack-plugin'),
   {resolve} = require('./utils'),
-  HtmlWebpackPlugin = require('html-webpack-plugin');
+  {zenPlugins} = require('./config');
 
 const plugins = [
   new webpack.HotModuleReplacementPlugin(),
@@ -10,4 +11,4 @@ const plugins = [
   })
 ];
 
-module.exports = plugins
+module.exports = plugins.concat(zenPlugins ? zenPlugins : []);
