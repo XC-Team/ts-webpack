@@ -1,7 +1,7 @@
 const pkg = require('../../package.json')
 
 module.exports = {
-  base: './',
+  base: '/',
   title: pkg.name,
   description: pkg.description,
   themeConfig: {
