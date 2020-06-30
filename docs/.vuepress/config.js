@@ -7,6 +7,11 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '文档', link: '/' },
+      { text: '背景', link: '/bg/'},
+      { text: '特性', link: '/character/'},
+      { text: '使用', link: '/use/'},
+      { text: '目录', link: '/catalog/'},
+      { text: '日志', link: '/log/'},
     ],
     sidebar: [
       { title: '文档', children: ['/']},
