@@ -10,11 +10,11 @@ module.exports = {
     ],
     sidebar: [
       { title: '文档', children: ['/']},
-      { title: '背景', children: ['/bg']},
-      { title: '特性', children: ['/character']},
-      { title: '使用', children: [ '/use']},
-      { title: '目录', children: [ '/catalog']},
-      { title: '日志', children: [ '/log']},
+      { title: '背景', children: ['/bg/']},
+      { title: '特性', children: ['/character/']},
+      { title: '使用', children: [ '/use/']},
+      { title: '目录', children: [ '/catalog/']},
+      { title: '日志', children: [ '/log/']},
     ],
     // 你的GitHub仓库，请正确填写
     repo: pkg.repository.url,
