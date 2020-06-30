@@ -18,6 +18,10 @@
 
 ## 特性
 
+- 1.TypeScript：面向接口、类型检查；
+- 2.高度可扩展：自定义webpack配置；
+- 3.TDD、覆盖率测试的webpack环境: 测试驱动开发、测试覆盖率；
+- 4.vuepress文档工具，主题可配置。
 
 ## 使用
 
@@ -38,29 +42,30 @@ npm run start
 npm run build
 ```
 
-### 扩展优化
+### 目录
 
 ```bash
-// build目录下
-build.js // 打包生产配置
-loaders.js // loader安装后配置
-optimization.js // 优化配置
-plugin.js // plugin安装后配置
-start.js // 本地开发配置
-utils.js // 工具，e.g. 处理路径的函数
-webpack.config.js // webpack公共配置
+|-- build目录下
+  |--build.js // 打包生产配置
+  |--loaders.js // loader安装后配置
+  |--optimization.js // 优化配置
+  |--plugin.js // plugin安装后配置
+  |--start.js // 本地开发配置
+  |--utils.js // 工具，e.g. 处理路径的函数
+  |--webpack.config.js // webpack公共配置
 
-// src目录
-index.ts // 轮子入口
-main.ts
-xxx.ts // 其他
+|-- docs 文档目录
+  |-- .vuepress 文档
 
-// docs目录
+|--src目录
+  |-- lib
+    |--index.ts // 轮子入口
+    |--math.ts
+    |--xxx.ts // 其他
 
-// deploy.sh用于发布文档 // deploy.sh "feat:增加文档功能"
-
-// package
-"docThemeConfig": {} //配置文档主题
+|-- deploy.sh用于发布工具文档上github // deploy.sh "feat:增加文档功能" "feat:增加文档功能"
+|-- package.json //"docThemeConfig": {} //配置vuepress文档主题
+|-- zen.config.js // 自定义配置
 ```
 
 ## 日志
@@ -73,4 +78,6 @@ xxx.ts // 其他
 - 2020.06.27 把zen.config.js的loader提取后放入build/loaders.js中
 - 2020.06.27 把zen.config.js的plugin提取后放入build/plugins.js中
 - 2020.06.27 把zen.config.js的optimization提取后放入build/optimization.js中
+- 2020.06.29 增加文档功能
+- 2020.06.30 优化更新ts-webpack-template文档
 - [ ] 加入eslint

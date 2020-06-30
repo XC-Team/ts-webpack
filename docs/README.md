@@ -1,15 +1,15 @@
 ---
 home: true
-heroText: ts-webpack-template文档
+heroText: ts-webpack-template
 tagline: 可供TypeScript开发的高度可扩展webpack环境
 actionText: 开始 →
-actionLink: /
+actionLink: /doc
 features:
 - title: TypeScript
-  details: 前端学习和项目实践之后的博客总结。
+  details: 面向接口、类型检查。
 - title: 高度可扩展
-  details: 计算机基础几大件。
+  details: 自定义webpack配置。
 - title: TDD、覆盖率测试的webpack环境
-  details: 后端学习和项目实践之后的博客总结。
+  details: 测试驱动开发、测试覆盖率。
 footer: Copyright © 2020 Zenquan
 ---
