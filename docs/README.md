@@ -3,7 +3,7 @@ home: true
 heroText: ts-webpack-template
 tagline: 可供TypeScript开发的高度可扩展webpack环境
 actionText: 开始 →
-actionLink: /bg
+actionLink: /bg/
 features:
 - title: TypeScript
   details: 面向接口、类型检查。
