@@ -13,14 +13,15 @@ module.exports = {
       { text: '目录', link: '/catalog/'},
       { text: '日志', link: '/log/'},
     ],
-    sidebar: [
-      { title: '文档', children: ['/']},
-      { title: '背景', children: ['/bg/']},
-      { title: '特性', children: ['/character/']},
-      { title: '使用', children: [ '/use/']},
-      { title: '目录', children: [ '/catalog/']},
-      { title: '日志', children: [ '/log/']},
-    ],
+    sidebar: {
+      '/': [
+        { title: '背景', children: ['/bg/']},
+        { title: '特性', children: ['/character/']},
+        { title: '使用', children: [ '/use/']},
+        { title: '目录', children: [ '/catalog/']},
+        { title: '日志', children: [ '/log/']},
+      ],
+    },
     // 你的GitHub仓库，请正确填写
     repo: pkg.repository.url,
     // 自定义仓库链接文字。
