@@ -81,3 +81,6 @@ npm run build
 - 2020.06.29 增加文档功能
 - 2020.06.30 优化更新ts-webpack-template文档
 - [ ] 加入eslint
+- [ ] 根据代码的规范注释生成文档
+- [ ] 利用babel-import-plugins来实现按需引入
+- [ ] 代码生层次压缩
